@@ -637,6 +637,13 @@ class MultiTax(object):
         else:
             return []
 
+    @property
+    def translation(self):
+        """
+        Returns the entire translation dictionary.
+        """
+        return self._translated_nodes
+
     def write(self,
               output_file: str,
               cols: list = ["node", "parent", "rank", "name"],
